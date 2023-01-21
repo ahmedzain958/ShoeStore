@@ -1,21 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
     </data>
 
-    <FrameLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:background="@drawable/login_background"
         android:layout_height="match_parent"
+        android:background="@drawable/login_background"
         tools:context=".login.LoginFragment">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment" />
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="@dimen/image_margin_top"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/baseline_android_24" />
 
-    </FrameLayout>
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/edittext_email"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Email" />
+
+        <EditText
+            android:id="@+id/edittext_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_background"
+            android:drawableStart="@drawable/account_circle"
+            android:drawablePadding="@dimen/email_drawable_padding_10dp"
+            android:hint="Email"
+            android:padding="@dimen/email_padding_10dp"
+            app:layout_constraintBottom_toTopOf="@+id/textview_password"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <TextView
+            android:id="@+id/textview_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/email_margin_end_20dp"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/edittext_password"
+            app:layout_constraintTop_toBottomOf="@+id/edittext_email"
+            tools:text="Password" />
+
+        <EditText
+            android:id="@+id/edittext_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_background"
+            android:drawableStart="@drawable/password"
+            android:drawablePadding="@dimen/email_drawable_padding_10dp"
+            android:hint="Password"
+            android:padding="@dimen/email_padding_10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_password"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <Button
+            android:id="@+id/button_signin"
+            android:textAllCaps="false"
+            android:text="Sgin In"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

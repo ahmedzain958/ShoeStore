@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="email_padding_10dp">10dp</dimen>
+    <dimen name="email_margin_start_20dp">20dp</dimen>
+    <dimen name="email_margin_top_20dp">20dp</dimen>
+    <dimen name="email_margin_end_20dp">20dp</dimen>
+    <dimen name="email_drawable_padding_10dp">10dp</dimen>
+    <dimen name="image_margin_top">150dp</dimen>
+</resources>
