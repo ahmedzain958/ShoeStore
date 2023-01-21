@@ -1,0 +1,14 @@
+ext{
+    navigationLibrary = '2.5.3'
+    navigationDependencies = [
+            safeArgsPlugin: "androidx.navigation:navigation-safe-args-gradle-plugin:${navigationLibrary}",
+            navifationFragment: "androidx.navigation:navigation-fragment-ktx:${navigationLibrary}",
+            navigationUI: "androidx.navigation:navigation-ui-ktx:${navigationLibrary}"
+    ]
+
+    kotlinVersion = '1.7.21'
+    kotlinDependencies = [
+            kotlinDependency: "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlinVersion}"
+    ]
+
+}
