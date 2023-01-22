@@ -67,7 +67,6 @@
             android:drawablePadding="@dimen/email_drawable_padding_10dp"
             android:hint="Password"
             android:padding="@dimen/email_padding_10dp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textview_password"
             tools:layout_editor_absoluteX="16dp" />
 
@@ -75,6 +74,7 @@
             android:id="@+id/button_signin"
             android:textAllCaps="false"
             android:text="Sgin In"
+            app:layout_constraintBottom_toBottomOf="parent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/button_background" />
