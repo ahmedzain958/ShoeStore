@@ -9,4 +9,7 @@
     <string name="welcome">Welcome to Zainco Shoe Store</string>
     <string name="welcome_description">Zainco Shoe Store, buy 1 and take 1 free</string>
     <string name="skip">Skip</string>
+    <string name="instructions_title">How to use Shoe Store App?</string>
+    <string name="instructions_description">"Adding a new shoe from the shoe list screen "</string>
+    <string name="shoe_list">Go to Shoe List</string>
 </resources>

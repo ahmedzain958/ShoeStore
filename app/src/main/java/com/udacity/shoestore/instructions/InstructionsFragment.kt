@@ -22,9 +22,9 @@ class InstructionsFragment : Fragment() {
         // Inflate the layout for this fragment
         val binding: FragmentInstrBinding =
             DataBindingUtil.inflate(layoutInflater, R.layout.fragment_instr, container, false)
-      /*  binding..setOnClickListener {
-            view?.findNavController()?.navigate(R.id.action_loginFragment_to_welcomeFragment)
-        }*/
+        binding.buttonShoeList.setOnClickListener {
+            view?.findNavController()?.navigate(R.id.action_instructionsFragment_to_shoeListFragment)
+        }
         return binding.root
     }
 }

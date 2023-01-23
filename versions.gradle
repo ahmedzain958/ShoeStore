@@ -1,4 +1,11 @@
 ext{
+
+    kotlinVersion = '1.7.21'
+    kotlinDependencies = [
+            kotlinDependencyProject: "org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}",
+            kotlinDependency: "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlinVersion}"
+    ]
+
     navigationLibrary = '2.5.3'
     navigationDependencies = [
             safeArgsPlugin: "androidx.navigation:navigation-safe-args-gradle-plugin:${navigationLibrary}",
@@ -8,6 +15,7 @@ ext{
 
     kotlinVersion = '1.7.21'
     kotlinDependencies = [
+            kotlinDependencyProject: "org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}",
             kotlinDependency: "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlinVersion}"
     ]
 

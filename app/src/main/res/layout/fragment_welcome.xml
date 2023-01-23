@@ -21,13 +21,13 @@
             android:textSize="24sp" />
 
         <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
             android:id="@+id/text_description"
-            tools:text="@string/welcome_description"
-            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:text="@string/welcome_description"
-            />
+            android:textSize="16sp"
+            tools:text="@string/welcome_description" />
 
         <Button
             android:layout_height="wrap_content"
