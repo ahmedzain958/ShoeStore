@@ -1,4 +1,4 @@
-package com.udacity.shoestore.login
+package com.udacity.shoestore.instructions
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,29 +8,23 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.udacity.shoestore.R
+import com.udacity.shoestore.databinding.FragmentInstrBinding
 import com.udacity.shoestore.databinding.FragmentLoginBinding
 
 
-class LoginFragment : Fragment() {
+class InstructionsFragment : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
         // Inflate the layout for this fragment
-        val binding: FragmentLoginBinding =
-            DataBindingUtil.inflate(layoutInflater, R.layout.fragment_login, container, false)
-        binding.buttonSignin.setOnClickListener {
+        val binding: FragmentInstrBinding =
+            DataBindingUtil.inflate(layoutInflater, R.layout.fragment_instr, container, false)
+      /*  binding..setOnClickListener {
             view?.findNavController()?.navigate(R.id.action_loginFragment_to_welcomeFragment)
-        }
-        binding.buttonSignup.setOnClickListener {
-            view?.findNavController()?.navigate(R.id.action_loginFragment_to_welcomeFragment)
-        }
+        }*/
         return binding.root
     }
 }

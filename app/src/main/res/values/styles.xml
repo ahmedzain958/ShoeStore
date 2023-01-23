@@ -21,5 +21,22 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="LoginButtonStyle" >
+        <item name="android:layout_marginStart">@dimen/sign_in_margin_start</item>
+        <item name="android:layout_marginTop">@dimen/sign_in_margin_top</item>
+        <item name="android:layout_marginEnd">@dimen/sign_in_margin_end</item>
+        <item name="android:layout_marginBottom">@dimen/sign_in_margin_bottom</item>
+        <item name="android:textAllCaps">false</item>
+
+    </style>
+ <style name="LoginEditTextStyle" >
+        <item name="android:layout_marginStart">@dimen/edit_margin_start</item>
+        <item name="android:layout_marginTop">@dimen/edit_margin_top</item>
+        <item name="android:layout_marginEnd">@dimen/edit_margin_end</item>
+        <item name="android:layout_marginBottom">@dimen/sign_in_margin_bottom</item>
+        <item name="android:background">@drawable/login_edit_background</item>
+        <item name="android:drawablePadding">@dimen/email_drawable_padding_10dp</item>
+        <item name="android:padding">@dimen/email_padding_10dp</item>
+    </style>
 
 </resources>
