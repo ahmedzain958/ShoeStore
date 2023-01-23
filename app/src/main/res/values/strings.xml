@@ -12,4 +12,5 @@
     <string name="instructions_title">How to use Shoe Store App?</string>
     <string name="instructions_description">"Adding a new shoe from the shoe list screen "</string>
     <string name="shoe_list">Go to Shoe List</string>
+    <string name="details">Details</string>
 </resources>
