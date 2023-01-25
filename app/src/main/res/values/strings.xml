@@ -13,4 +13,6 @@
     <string name="instructions_description">"Adding a new shoe from the shoe list screen "</string>
     <string name="shoe_list">Go to Shoe List</string>
     <string name="details">Details</string>
+    <string name="shoe_name">Nike</string>
+    <string name="shoe_description">The best Shoes</string>
 </resources>
