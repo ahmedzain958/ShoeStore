@@ -15,4 +15,10 @@
     <string name="details">Details</string>
     <string name="shoe_name">Nike</string>
     <string name="shoe_description">The best Shoes</string>
+    <string name="logout">Logout</string>
+    <string name="shoe_size">Size</string>
+    <string name="shoe_company">Company</string>
+    <string name="label_shoe_name">Name</string>
+    <string name="description">Description</string>
+    <string name="save">Save</string>
 </resources>

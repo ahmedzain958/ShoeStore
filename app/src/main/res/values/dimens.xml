@@ -16,4 +16,6 @@
     <dimen name="sign_in_margin_start">20dp</dimen>
     <dimen name="sign_in_margin_end">24dp</dimen>
     <dimen name="text_margin">16dp</dimen>
+
+    <dimen name="details_margin">10dp</dimen>
 </resources>
