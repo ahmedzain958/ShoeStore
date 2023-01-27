@@ -9,6 +9,7 @@ import com.udacity.shoestore.models.Shoe
 class ShoeListViewModel : ViewModel() {
 
 
+    val shoeItem: LiveData<Shoe> = MutableLiveData<Shoe>()
     val shoeList: LiveData<MutableList<Shoe>>
         get() = _shoeList
     private val _shoeList= MutableLiveData<MutableList<Shoe>>()
@@ -24,21 +25,12 @@ class ShoeListViewModel : ViewModel() {
         _shoeList.value = list
     }
 
-    fun addNewShoe(shoe: Shoe) {
-        for (shoe in _shoeList.value!!){
-            println("_shoeList before addNewShoe " + shoe.name + " "+ shoe.size)
+    fun addNewShoe() {
+        shoeItem.value?.let {
+            list.add(it)
+            _shoeList.value = list
         }
-       for (shoe in shoeList.value!!){
-            println("shoeList before addNewShoe " + shoe.name + " "+ shoe.size)
-        }
-        list.add(shoe)
-        _shoeList.value = list
-        for (shoe in _shoeList.value!!){
-            println("_shoeList after addNewShoe " + shoe.name + " "+ shoe.size)
-        }
-        for (shoe in shoeList.value!!){
-            println("shoeList after addNewShoe " + shoe.name + " "+ shoe.size)
-        }
+
     }
 
 }

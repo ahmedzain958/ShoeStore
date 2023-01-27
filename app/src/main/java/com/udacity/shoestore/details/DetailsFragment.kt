@@ -28,15 +28,16 @@ class DetailsFragment : Fragment() {
     ): View? {
         val binding: FragmentDetailsBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_details, container, false)
-
-        binding.buttonSave.setOnClickListener {
+        binding.viewmodel = sharedViewModel
+        binding.lifecycleOwner = this
+       /* binding.buttonSave.setOnClickListener {
             val shoeName = binding.editTextShoeName.text.toString()
             val shoeSize = binding.editTextShoeSize.text.toString().toDouble()
             val company = binding.editTextShoeCompany.text.toString()
             val description = binding.editTextShoeDescription.text.toString()
             val shoe = Shoe(shoeName, shoeSize, company, description)
-            sharedViewModel.addNewShoe(shoe)
-        }
+            sharedViewModel.addNewShoe()
+        }*/
 //        binding.lifecycleOwner = this
         return binding.root
     }

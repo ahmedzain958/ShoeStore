@@ -2,9 +2,10 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-
     <data>
-
+        <variable
+            name="viewmodel"
+            type="com.udacity.shoestore.list.ShoeListViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -15,7 +16,7 @@
 
         <TextView
             android:id="@+id/textView4"
-            style="@style/DetailsTextViews"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/label_shoe_name"
             app:layout_constraintBottom_toTopOf="@+id/textView5"
@@ -24,7 +25,7 @@
 
         <TextView
             android:id="@+id/textView5"
-            style="@style/DetailsTextViews"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/shoe_company"
             app:layout_constraintBottom_toTopOf="@+id/guideline3"
@@ -34,18 +35,14 @@
         <EditText
             android:id="@+id/editText_shoe_name"
             style="@style/DetailsEditText"
-
-            android:layout_height="40dp"
-            android:inputType="textPersonName"
-
+            android:text="@={viewmodel.shoeItem.name}"
             app:layout_constraintBaseline_toBaselineOf="@+id/textView4"
             app:layout_constraintStart_toEndOf="@+id/textView4" />
 
         <EditText
             android:id="@+id/editText_shoe_company"
             style="@style/DetailsEditText"
-            android:layout_height="40dp"
-            android:inputType="textPersonName"
+            android:text="@={viewmodel.shoeItem.company}"
 
             app:layout_constraintBaseline_toBaselineOf="@+id/textView5"
             app:layout_constraintStart_toEndOf="@+id/textView5" />
@@ -63,17 +60,15 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:text="@string/shoe_size"
-            app:layout_constraintBottom_toBottomOf="@+id/editText_shoe_name"
-            app:layout_constraintStart_toEndOf="@+id/editText_shoe_name"
-            app:layout_constraintTop_toTopOf="@+id/editText_shoe_name" />
+            app:layout_constraintBottom_toBottomOf="@+id/editText_shoe_size"
+            app:layout_constraintEnd_toStartOf="@+id/editText_shoe_size"
+            app:layout_constraintTop_toTopOf="@+id/editText_shoe_size" />
 
         <EditText
             android:id="@+id/editText_shoe_size"
             style="@style/DetailsEditText"
-            android:layout_height="40dp"
             android:layout_marginEnd="10dp"
-            android:inputType="textPersonName"
-            app:layout_constraintBaseline_toBaselineOf="@+id/textView8"
+            app:layout_constraintBaseline_toBaselineOf="@+id/editText_shoe_name"
             app:layout_constraintEnd_toEndOf="parent" />
 
         <TextView
@@ -82,26 +77,24 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:text="@string/description"
-            app:layout_constraintBottom_toBottomOf="@+id/editText_shoe_company"
-            app:layout_constraintStart_toEndOf="@+id/editText_shoe_company"
-            app:layout_constraintTop_toTopOf="@+id/editText_shoe_company" />
+            app:layout_constraintBottom_toBottomOf="@+id/editText_shoe_description"
+            app:layout_constraintEnd_toStartOf="@+id/editText_shoe_description"
+            app:layout_constraintTop_toTopOf="@+id/editText_shoe_description" />
 
         <EditText
             android:id="@+id/editText_shoe_description"
             style="@style/DetailsEditText"
-            android:layout_height="40dp"
             android:layout_marginEnd="10dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            app:layout_constraintBaseline_toBaselineOf="@+id/textView9"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:layout_editor_absoluteX="286dp" />
+            android:text="@={viewmodel.shoeItem.description}"
+            app:layout_constraintBaseline_toBaselineOf="@+id/editText_shoe_company"
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <Button
             android:id="@+id/button_save"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/save"
+            android:onClick="@{v -> viewmodel.addNewShoe()}"
             app:layout_constraintBottom_toTopOf="@+id/guideline3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
