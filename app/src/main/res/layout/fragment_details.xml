@@ -43,7 +43,6 @@
             android:id="@+id/editText_shoe_company"
             style="@style/DetailsEditText"
             android:text="@={viewmodel.shoeItem.company}"
-
             app:layout_constraintBaseline_toBaselineOf="@+id/textView5"
             app:layout_constraintStart_toEndOf="@+id/textView5" />
 
